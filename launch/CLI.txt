@@ -1,0 +1,7 @@
+Master
+roslaunch detection camera.launch
+
+Slave
+rosrun image_transport republish compressed in:=usb_cam/image_raw out:=camera/image_decompressed
+
+rosrun detection YoloNode.py
